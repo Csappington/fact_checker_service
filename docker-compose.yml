@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  fact_checker_service:
+    build: ./docker
+    ports:
+      - 8080:8080
+    depends_on:
+      [mysql_db]
+    restart: always
+  mysql_db:
+    image: "mysql:8.0"
+    ports:
+      - 3307:3306
+    environment:
+      MYSQL_DATABASE: fact_checker_reports
+      MYSQL_USER: dev_user
+      MYSQL_PASSWORD: nE5kMc7JCGNqwDQM
+      MYSQL_ROOT_PASSWORD: nE5kMc7JCGNqwDQN

@@ -1,5 +1,5 @@
 # fact_checker_service
-Fact-checker API for use with fact-checker plugin
+Fact-checker API for use with fact-checker plugin.
 
 Small REST API for use with the fact-checker plugin that allows for the storage of fact-checking reports received from the plugin.
 
